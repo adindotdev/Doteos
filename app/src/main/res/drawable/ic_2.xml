@@ -1,0 +1,26 @@
+<!--
+  ~ Copyright (C) 2018 Adin Kwok (adinkwok)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="500dp"
+    android:height="500dp"
+    android:viewportHeight="500"
+    android:viewportWidth="500">
+
+    <path
+        android:fillColor="@android:color/black"
+        android:pathData="m114 177h52c0-30.68 12.83-62.35 40-78.55 28.81-17.17 76.86-14.09 99.83 11.55 12.43 13.88 17.95 35.67 18.17 54 0.36 31.19-12.35 58.57-29.33 84-26.34 39.44-71.3 80.86-107.67 111.58l-55 45.22c-3.64 2.91-16.99 12.91-18.4 16.37-0.72 1.77-0.6 4.88-0.6 6.83v31h275v-44h-195l43-35.42c38.16-32.24 84.23-75.72 110-118.58 15.86-26.39 29.95-58.65 30-90v-14c-0.02-10.05-2.55-25.43-5.67-35-6.6-20.25-15.22-35.44-31.33-49.83-21.59-19.28-49.74-27.32-78-29.26l-16-0.91-10 0.91c-22.44 1.57-42.51 6.92-62 18.54-27.91 16.64-46.47 46.3-53.77 77.55-2.92 12.53-4.19 25.22-5.23 38z" />
+</vector>

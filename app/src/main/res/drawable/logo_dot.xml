@@ -1,0 +1,32 @@
+<!--
+  ~ Copyright (C) 2018 Adin Kwok (adinkwok)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="1094dp"
+    android:height="308dp"
+    android:viewportWidth="1094"
+    android:viewportHeight="308">
+
+    <path
+        android:fillColor="@color/colorPrimaryDark"
+        android:pathData="M282 75.44c-29.36 5.42-52.62 22.82-62.66 51.56-2.84 8.14-4.33 14.34-4.34 23-0.02 13.93 0.05 21.66 5.45 35 10.89 26.88 38.97 48.65 68.55 49 15.9 0.18 27.46-0.98 42-8.27 44.9-22.5 57.02-83.04 25.71-121.72-18.06-22.31-46.58-32.18-74.71-28.57z" />
+    <path
+        android:fillColor="@color/colorPrimary"
+        android:pathData="M287 99.44c-19.55 3.61-35.55 13.54-43.54 32.56-14.1 33.58 5.81 71.81 42.54 77 5.59 0.79 8.24 1.4 14 0.57 12.03-1.72 21.52-5.17 31-13.03 24.3-20.16 24.5-59.33 2.91-81.5-11.67-11.99-30.47-17.71-46.91-15.6z" />
+    <path
+        android:fillColor="@color/colorAccent"
+        android:pathData="M289 123.25c-7.34 1.85-12.59 4.11-17.82 9.79-16.86 18.33-6.86 51.2 21.82 52.87 33.36 1.94 45.68-44.65 16-59.53-3.84-1.93-8.71-3.17-13-3.13-2.68-0.32-4.38-0.15-7 0z" />
+</vector>

@@ -1,0 +1,35 @@
+<!--
+  ~ Copyright (C) 2018 Adin Kwok (adinkwok)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <color name="primaryTextColor">#707070</color>
+
+    <color name="colorPrimary">#1E88E5</color>
+    <color name="colorPrimaryDark">#005BB2</color>
+    <color name="colorAccent">#69B6FF</color>
+
+    <color name="colorPrimaryGrey">#9E9E9E</color>
+    <color name="colorPrimaryDarkGrey">#707070</color>
+    <color name="colorAccentGrey">#CFCFCF</color>
+
+    <color name="colorPrimaryRed">#D32F2F</color>
+    <color name="colorPrimaryDarkRed">#9A0007</color>
+    <color name="colorAccentRed">#FF6659</color>
+
+    <color name="colorPrimaryGreen">#4CAF50</color>
+    <color name="colorPrimaryDarkGreen">#087F23</color>
+    <color name="colorAccentGreen">#80E27E</color>
+</resources>

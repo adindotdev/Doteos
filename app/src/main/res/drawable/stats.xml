@@ -1,0 +1,26 @@
+<!--
+  ~ Copyright (C) 2018 Adin Kwok (adinkwok)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="484dp"
+    android:height="115dp"
+    android:viewportHeight="115"
+    android:viewportWidth="484">
+
+    <path
+        android:fillColor="@android:color/black"
+        android:pathData="M0 83c0.04 4.48 0.16 7.76 1.95 12 10.83 25.53 61.11 27.96 72.58-2 1.64-4.28 1.52-7.52 1.47-12-0.29-24.72-21.74-26.65-40-32.67-8.64-2.85-21.06-8.09-19.63-19.33 2.48-19.54 34.96-22.61 41.63 0h17c-0.87-17.87-15.94-28.8-33-29-15.78-0.18-31.67 1.51-39.1 18-1.43 3.17-2.64 8.52-2.8 12-0.12 2.69 0.57 7.38 1.25 10 6.35 24.45 39.67 19.2 53.61 32.18 11.97 11.16 1.95 28.1-14.96 28.78-7.48 0.3-14.69-1.89-19.44-8-3.07-3.94-3.18-7.41-5.26-8.97-2.09-1.56-12.25-0.99-15.3-0.99zm408 0c0.04 4.48 0.16 7.76 1.95 12 10.83 25.53 61.11 27.96 72.58-2 1.64-4.28 1.52-7.52 1.47-12-0.29-24.72-21.74-26.65-40-32.67-8.64-2.85-21.06-8.09-19.63-19.33 2.48-19.54 34.96-22.61 41.63 0h17c-0.87-17.87-15.94-28.8-33-29-15.78-0.18-31.67 1.51-39.1 18-1.43 3.17-2.64 8.52-2.8 12-0.12 2.69 0.57 7.38 1.25 10 6.35 24.45 39.67 19.2 53.61 32.18 11.97 11.16 1.95 28.1-14.96 28.78-7.48 0.3-14.69-1.89-19.44-8-3.07-3.94-3.18-7.41-5.26-8.97-2.09-1.56-12.25-0.99-15.3-0.99zm-310-82v13h31v99h15v-99h30v-13h-76zm211 0v13h31v99h15v-99h30v-13h-76zm-116 112c3.73 0 13.72 0.85 16.3-1.6 3.3-3.12 5.57-18.62 9.97-21.38 1.97-1.23 5.45-1.02 7.73-1.02h26c2.85 0 9.35-0.44 11.61 1.02 2.19 1.42 3.22 4.63 4.05 6.98l5.34 16h17l-10.95-31-19.47-54-6.24-17s-3.85-7.98-3.85-7.98l-11.49-1.02-5.49 1.02s-3.56 6.98-3.56 6.98l-6.26 17s-21.38 59-21.38 59l-9.31 27zm49-90l8.69 23 10.31 30h-38l8.31-25 10.69-28z" />
+</vector>

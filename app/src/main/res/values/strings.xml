@@ -1,0 +1,51 @@
+<!--
+  ~ Copyright (C) 2018 Adin Kwok (adinkwok)
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">Doteos</string>
+    <string name="fastest_score_text">Your fastest scores:</string>
+    <string name="fastest_score_text_single">Your fastest score:</string>
+    <string name="fastest_score_show">%.3fs @ %.3f dots/s</string>
+    <string name="play_button_single">Single player</string>
+    <string name="play_button_double">Head to head</string>
+    <string name="website_button">Who am I?</string>
+    <string name="play_again">Play again</string>
+    <string name="volume">Volume</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="night_mode">Night mode</string>
+    <string name="game_instructions">Tap the blue dots as\nthey appear on the grid.</string>
+    <string name="game_instructions_double">Finish tapping the blue dots\non the grid before your opponent.</string>
+    <string name="game_waiting">…</string>
+    <string name="quit_message">Quitting\'s for losers…</string>
+    <string name="end_message_slowest">Haha can you get any slower…</string>
+    <string name="end_message_slow">Hate to see this.</string>
+    <string name="end_message_mediocre">Your time ain\'t looking so hot.</string>
+    <string name="end_message_aight">Pussom respekt on ur name.</string>
+    <string name="end_message_good">Mad respect on ur name.</string>
+    <string name="end_message_pre_good">You play this too much.</string>
+    <string name="end_message_wow">We get it, you\'re good.</string>
+    <string name="end_message_no_way">If you\'re not cheating, nice.</string>
+    <string name="end_message_winner">Don\'t rub it in their face, okay?</string>
+    <string name="end_message_loser">Maybe just don\'t suck next time.</string>
+    <string name="end_message_tie">I did not think it was possible to tie…</string>
+    <string name="graph_total_time">Total time: %.3f seconds</string>
+    <string name="graph_average_rate">Average rate: %.3f dots per second</string>
+    <string name="graph_double_fastest">Fastest reaction time: %.3f seconds</string>
+    <string name="graph_double_slowest">Slowest reaction time: %.3f seconds</string>
+    <string name="graph_horizontal_title">Dot number</string>
+    <string name="graph_vertical_title">Reaction time (seconds)</string>
+    <string name="graph_back_button">Back to menu</string>
+</resources>
