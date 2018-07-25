@@ -55,7 +55,7 @@ public class UserSettings {
     }
 
     public static void setNewHighScore(Context context, int dotIndex, int[][] activeDots, StringBuilder str) {
-        final SharedPreferences savedScores = context.getSharedPreferences("saved_scores", Context.MODE_PRIVATE);
+        SharedPreferences savedScores = context.getSharedPreferences("saved_scores", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = savedScores.edit();
         int score1 = savedScores.getInt("score1", 0);
         int score2 = savedScores.getInt("score2", 0);

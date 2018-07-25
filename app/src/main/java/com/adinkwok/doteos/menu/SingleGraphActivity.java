@@ -120,7 +120,7 @@ public class SingleGraphActivity extends Activity {
         if (mFromGame)
             playGame.setText(R.string.play_again);
         playGame.setOnClickListener(view -> {
-            final Intent singlePlayerGame = new Intent(mContext, DoteosActivity.class);
+            Intent singlePlayerGame = new Intent(mContext, DoteosActivity.class);
             singlePlayerGame.putExtra("game_mode", 1);
             UserSettings.startClickSound(mContext);
             startActivity(singlePlayerGame);

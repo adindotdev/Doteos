@@ -71,7 +71,7 @@ public class MainMenuActivity extends Activity {
         mContext = this;
         enableImmersiveMode();
 
-        final Vibrator vb = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        Vibrator vb = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 
         mFastestScore = findViewById(R.id.fastest_score);
         mFastestScore1 = findViewById(R.id.fastest_score_1);

@@ -145,7 +145,7 @@ public class DoubleGraphActivity extends Activity {
         }
 
         playGameTop.setOnClickListener(view -> {
-            final Intent doublePlayerGame = new Intent(mContext, DoteosActivity.class);
+            Intent doublePlayerGame = new Intent(mContext, DoteosActivity.class);
             doublePlayerGame.putExtra("game_mode", 2);
             UserSettings.startClickSound(mContext);
             startActivity(doublePlayerGame);
@@ -154,7 +154,7 @@ public class DoubleGraphActivity extends Activity {
         });
 
         playGameBot.setOnClickListener(view -> {
-            final Intent doublePlayerGame = new Intent(mContext, DoteosActivity.class);
+            Intent doublePlayerGame = new Intent(mContext, DoteosActivity.class);
             doublePlayerGame.putExtra("game_mode", 2);
             UserSettings.startClickSound(mContext);
             startActivity(doublePlayerGame);

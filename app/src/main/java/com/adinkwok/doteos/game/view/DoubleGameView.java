@@ -118,13 +118,13 @@ public class DoubleGameView extends SurfaceView implements SurfaceHolder.Callbac
     }
 
     private void setupGame() {
-        final int spaceConstant = mScreenWidth / 8;
-        final int playerOneMidpoint = (mScreenHeight / 2) + (mScreenHeight / 4);
+        int spaceConstant = mScreenWidth / 8;
+        int playerOneMidpoint = (mScreenHeight / 2) + (mScreenHeight / 4);
         int startingYBot = playerOneMidpoint - spaceConstant;
         int endingY = playerOneMidpoint + spaceConstant;
         int startingX = (mScreenWidth / 2) - spaceConstant;
         int endingX = (mScreenWidth / 2) + spaceConstant;
-        final SharedPreferences userSettings
+        SharedPreferences userSettings
                 = mContext.getSharedPreferences("user_settings", Context.MODE_PRIVATE);
 
         Grids.createPattern(2);
@@ -156,7 +156,7 @@ public class DoubleGameView extends SurfaceView implements SurfaceHolder.Callbac
                 Grids.generatedPattern[index],
                 endingX + spaceConstant, playerOneMidpoint, 0};
 
-        final int playerTwoMidpoint = (mScreenHeight / 4);
+        int playerTwoMidpoint = (mScreenHeight / 4);
         int startingYTop = playerTwoMidpoint + spaceConstant;
         endingY = playerTwoMidpoint - spaceConstant;
         startingX = (mScreenWidth / 2) + spaceConstant;

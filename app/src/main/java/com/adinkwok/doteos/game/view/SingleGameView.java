@@ -127,11 +127,11 @@ public class SingleGameView extends SurfaceView implements SurfaceHolder.Callbac
     }
 
     private void setupGame() {
-        final int spaceConstant = mScreenWidth / 8;
-        final int startingY = (mScreenHeight / 2) - (mScreenWidth / 4);
-        final int endingY = (mScreenHeight / 2) + (mScreenWidth / 4);
-        final int startingX = (mScreenWidth / 2) - (mScreenWidth / 4);
-        final int endingX = (mScreenWidth / 2) + (mScreenWidth / 4);
+        int spaceConstant = mScreenWidth / 8;
+        int startingY = (mScreenHeight / 2) - (mScreenWidth / 4);
+        int endingY = (mScreenHeight / 2) + (mScreenWidth / 4);
+        int startingX = (mScreenWidth / 2) - (mScreenWidth / 4);
+        int endingX = (mScreenWidth / 2) + (mScreenWidth / 4);
 
         Grids.createPattern(1);
         mActiveDots = new int[Grids.generatedPattern.length][5];
@@ -162,11 +162,11 @@ public class SingleGameView extends SurfaceView implements SurfaceHolder.Callbac
         mTimeY = startingY - spaceConstant;
         mTimeX = mScreenWidth / 2;
 
-        final SharedPreferences userSettings =
+        SharedPreferences userSettings =
                 mContext.getSharedPreferences("user_settings", Context.MODE_PRIVATE);
 
         mIsVibrate = userSettings.getBoolean("vibrate_on", true);
-        final boolean isNightMode = userSettings.getBoolean("night_mode", false);
+        boolean isNightMode = userSettings.getBoolean("night_mode", false);
         mCanvasColor = isNightMode ? Color.BLACK : Color.WHITE;
         mTimePaint.setColor(isNightMode ? Color.WHITE : Color.BLACK);
         if (isNightMode) {
