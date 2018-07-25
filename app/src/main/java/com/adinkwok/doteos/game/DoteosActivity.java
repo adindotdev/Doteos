@@ -17,14 +17,11 @@
 package com.adinkwok.doteos.game;
 
 import android.app.Activity;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
@@ -41,12 +38,6 @@ public class DoteosActivity extends Activity {
     private GameThread mGameThread;
     private Context mContext;
 
-    public static void closeMe(Context context) {
-        Intent intent = new Intent("com.adinkwok.doteos.KILL_ME");
-        intent.putExtra("action", "close");
-        LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
-    }
-
     @SuppressWarnings("SuspiciousNameCombination")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +46,6 @@ public class DoteosActivity extends Activity {
         mContext = this;
         enableImmersiveMode();
         UserSettings.pauseMenuMusic();
-        registerKillReceiver();
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
@@ -69,11 +59,11 @@ public class DoteosActivity extends Activity {
 
         mGameMode = getIntent().getIntExtra("game_mode", 1);
         if (mGameMode == 1) {
-            mSingleGameView = new SingleGameView(mContext, screenHeight, screenWidth);
+            mSingleGameView = new SingleGameView(mContext, this, screenHeight, screenWidth);
             mGameThread = new GameThread(mSingleGameView.getHolder(), mSingleGameView);
             setContentView(mSingleGameView);
         } else if (mGameMode == 2) {
-            mDoubleGameView = new DoubleGameView(mContext, screenHeight, screenWidth);
+            mDoubleGameView = new DoubleGameView(mContext, this, screenHeight, screenWidth);
             mGameThread = new GameThread(mDoubleGameView.getHolder(), mDoubleGameView);
             setContentView(mDoubleGameView);
         }
@@ -88,20 +78,6 @@ public class DoteosActivity extends Activity {
         if (hasFocus) {
             enableImmersiveMode();
         }
-    }
-
-    private void registerKillReceiver() {
-        BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-            @Override
-            public void onReceive(Context context, Intent intent) {
-                String action = intent.getStringExtra("action");
-                if (action.equals("close")) {
-                    finish();
-                }
-            }
-        };
-        LocalBroadcastManager.getInstance(mContext).registerReceiver(broadcastReceiver,
-                new IntentFilter("com.adinkwok.doteos.KILL_ME"));
     }
 
     @Override

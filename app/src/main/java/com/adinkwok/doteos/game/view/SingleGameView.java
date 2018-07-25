@@ -17,6 +17,7 @@
 package com.adinkwok.doteos.game.view;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -45,6 +46,7 @@ import java.util.Objects;
 
 public class SingleGameView extends SurfaceView implements SurfaceHolder.Callback {
     private final Context mContext;
+    private final Activity mParentActivity;
     private final Chronometer mStopwatch;
 
     private final int mScreenHeight;
@@ -56,7 +58,7 @@ public class SingleGameView extends SurfaceView implements SurfaceHolder.Callbac
     private final Drawable mGreenDot;
     private final Drawable mRedDot;
     private final Drawable mRestartButton;
-    
+
     /**
      * Holds data of all dots on the grid.
      * Dot data array holds the following:
@@ -99,15 +101,16 @@ public class SingleGameView extends SurfaceView implements SurfaceHolder.Callbac
     private int mTimeX;
 
     public SingleGameView(Context context) {
-        this(context, 0, 0);
+        this(context, null, 0, 0);
     }
 
     @SuppressLint({"ClickableViewAccessibility"})
-    public SingleGameView(Context context, int screenHeight, int screenWidth) {
+    public SingleGameView(Context context, Activity parentActivity, int screenHeight, int screenWidth) {
         super(context);
         Log.d("GAME VIEW", "GAME VIEW INITIATED, YEAH!");
         getHolder().addCallback(this);
         mContext = context;
+        mParentActivity = parentActivity;
         mStopwatch = new Chronometer(mContext);
         mVibrator = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
 
@@ -224,7 +227,6 @@ public class SingleGameView extends SurfaceView implements SurfaceHolder.Callbac
             mActiveDots[mDotIndex][0] = 1;
         } else {
             endGame();
-
         }
     }
 
@@ -304,8 +306,8 @@ public class SingleGameView extends SurfaceView implements SurfaceHolder.Callbac
                 Log.d("GAME VIEW", "GOING BACK TO MENU, YEAH!");
                 break;
         }
-        DoteosActivity.closeMe(mContext);
         Log.d("GAME VIEW", "CLEAN FINISHED, YEAH!!");
+        mParentActivity.finish();
     }
 
     private Drawable getDotSprite(int color, int x, int y) {

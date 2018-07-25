@@ -17,6 +17,7 @@
 package com.adinkwok.doteos.game.view;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -44,6 +45,7 @@ import java.util.Objects;
 
 public class DoubleGameView extends SurfaceView implements SurfaceHolder.Callback {
     private final Context mContext;
+    private final Activity mParentActivity;
     private final Chronometer mStopwatch;
     private final Vibrator mVibrator;
 
@@ -89,15 +91,16 @@ public class DoubleGameView extends SurfaceView implements SurfaceHolder.Callbac
     private boolean mPlayerTwoDone;
 
     public DoubleGameView(Context context) {
-        this(context, 0, 0);
+        this(context, null, 0, 0);
     }
 
     @SuppressLint("ClickableViewAccessibility")
-    public DoubleGameView(Context context, int screenHeight, int screenWidth) {
+    public DoubleGameView(Context context, Activity parentActivity, int screenHeight, int screenWidth) {
         super(context);
         getHolder().addCallback(this);
         Log.d("GAME VIEW", "GAME VIEW INITIATED, YEAH!");
         mContext = context;
+        mParentActivity = parentActivity;
         mStopwatch = new Chronometer(mContext);
         mVibrator = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
 
@@ -330,8 +333,8 @@ public class DoubleGameView extends SurfaceView implements SurfaceHolder.Callbac
                 Log.d("GAME VIEW", "GOING BACK TO MENU, YEAH!");
                 break;
         }
-        DoteosActivity.closeMe(mContext);
         Log.d("GAME VIEW", "CLEAN FINISHED, YEAH!!");
+        mParentActivity.finish();
     }
 
     private Drawable getDotSprite(int color, int x, int y) {
