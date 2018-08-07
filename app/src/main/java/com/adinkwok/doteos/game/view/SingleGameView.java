@@ -28,9 +28,9 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.SystemClock;
-import android.os.Vibrator;
 import android.support.v7.content.res.AppCompatResources;
 import android.util.Log;
+import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -52,7 +52,6 @@ public class SingleGameView extends SurfaceView implements SurfaceHolder.Callbac
     private final int mScreenHeight;
     private final int mScreenWidth;
 
-    private final Vibrator mVibrator;
     private final Drawable mGreyDot;
     private final Drawable mBlueDot;
     private final Drawable mGreenDot;
@@ -112,7 +111,6 @@ public class SingleGameView extends SurfaceView implements SurfaceHolder.Callbac
         mContext = context;
         mParentActivity = parentActivity;
         mStopwatch = new Chronometer(mContext);
-        mVibrator = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
 
         mScreenHeight = screenHeight;
         mScreenWidth = screenWidth;
@@ -217,9 +215,8 @@ public class SingleGameView extends SurfaceView implements SurfaceHolder.Callbac
 
     private void pressedDot() {
         UserSettings.startClickSound(mContext);
-        assert mVibrator != null;
         if (mIsVibrate)
-            mVibrator.vibrate(15);
+            performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
         mActiveDots[mDotIndex][0] = 2;
         mActiveDots[mDotIndex][4] = (int) (SystemClock.elapsedRealtime() - mStopwatch.getBase());
         if (mDotIndex < mActiveDots.length - 1) {

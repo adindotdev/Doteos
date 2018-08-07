@@ -27,9 +27,9 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.os.SystemClock;
-import android.os.Vibrator;
 import android.support.v7.content.res.AppCompatResources;
 import android.util.Log;
+import android.view.HapticFeedbackConstants;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -47,7 +47,6 @@ public class DoubleGameView extends SurfaceView implements SurfaceHolder.Callbac
     private final Context mContext;
     private final Activity mParentActivity;
     private final Chronometer mStopwatch;
-    private final Vibrator mVibrator;
 
     private final int mScreenHeight;
     private final int mScreenWidth;
@@ -102,7 +101,6 @@ public class DoubleGameView extends SurfaceView implements SurfaceHolder.Callbac
         mContext = context;
         mParentActivity = parentActivity;
         mStopwatch = new Chronometer(mContext);
-        mVibrator = (Vibrator) mContext.getSystemService(Context.VIBRATOR_SERVICE);
 
         mScreenHeight = screenHeight;
         mScreenWidth = screenWidth;
@@ -234,9 +232,8 @@ public class DoubleGameView extends SurfaceView implements SurfaceHolder.Callbac
 
     private void playerOnePressedDot() {
         UserSettings.startClickSound(mContext);
-        assert mVibrator != null;
         if (mIsVibrate)
-            mVibrator.vibrate(15);
+            performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
         mActiveDots[mDotIndexPlayerOne][0] = 2;
         mActiveDots[mDotIndexPlayerOne][4] =
                 (int) (SystemClock.elapsedRealtime() - mStopwatch.getBase());
@@ -255,9 +252,8 @@ public class DoubleGameView extends SurfaceView implements SurfaceHolder.Callbac
 
     private void playerTwoPressedDot() {
         UserSettings.startClickSound(mContext);
-        assert mVibrator != null;
         if (mIsVibrate)
-            mVibrator.vibrate(15);
+            performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
         mActiveDots[mDotIndexPlayerTwo][0] = 2;
         mActiveDots[mDotIndexPlayerTwo][4]
                 = (int) (SystemClock.elapsedRealtime() - mStopwatch.getBase());
